@@ -1,2 +1,2 @@
-dataset_variant: ros
+dataset_variant: smote
 n_estimators: 100
