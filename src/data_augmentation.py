@@ -70,5 +70,5 @@ for resample_spec in RESAMPLE_CONFIG:
     suite.save_as_html(f"{REPORTS_DIR}/{resample_spec['name']}_report.html")
 
     # saving the resampled data
-    X_train.to_csv(f"{PROCESSED_DIR}/X_train_{resample_spec['name_short']}.csv", index=None)
-    X_test.to_csv(f"{PROCESSED_DIR}/X_test_{resample_spec['name_short']}.csv", index=None)
+    X_res.to_csv(f"{PROCESSED_DIR}/X_train_{resample_spec['name_short']}.csv", index=None)
+    y_res.to_csv(f"{PROCESSED_DIR}/y_train_{resample_spec['name_short']}.csv", index=None)
