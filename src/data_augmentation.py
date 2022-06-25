@@ -1,3 +1,4 @@
+import os 
 import pandas as pd 
 from config import RAW_DIR, PROCESSED_DIR, REPORTS_DIR
 
@@ -10,6 +11,10 @@ from imblearn.under_sampling import RandomUnderSampler
 
 from deepchecks.tabular import Dataset
 from deepchecks.tabular.suites import full_suite
+
+# prepare output dir
+os.makedirs(REPORTS_DIR, exist_ok=True)
+
 
 # define the considered augmentations
 RESAMPLE_CONFIG = [
