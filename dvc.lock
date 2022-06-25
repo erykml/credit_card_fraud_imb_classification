@@ -15,3 +15,18 @@ stages:
       md5: 0924010ed1a9777b1cbc8d502e3a87e1.dir
       size: 148417072
       nfiles: 4
+  augment_data:
+    cmd: python src/data_augmentation.py
+    deps:
+    - path: data/processed
+      md5: fa2ff687454d9bd44cea2d19c5521854.dir
+      size: 739806856
+      nfiles: 12
+    - path: src/config.py
+      md5: 47a81d95d92fc2a752ccc7bfc7175699
+      size: 129
+    outs:
+    - path: data_validation
+      md5: c98ebde6d59df28240b13d60ffea8397.dir
+      size: 2943698
+      nfiles: 4

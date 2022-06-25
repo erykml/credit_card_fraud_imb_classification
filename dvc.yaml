@@ -6,3 +6,10 @@ stages:
     - src/config.py
     outs:
     - data/processed
+  augment_data:
+    cmd: python src/data_augmentation.py
+    deps:
+    - data/processed
+    - src/config.py
+    outs:
+    - data_validation
