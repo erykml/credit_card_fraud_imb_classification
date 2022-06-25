@@ -3,8 +3,6 @@
 scrt.py
 *.pyc
 /models
-/metrics.csv
-/params.yml
 /artifacts
 
 # Byte-compiled / optimized / DLL files
