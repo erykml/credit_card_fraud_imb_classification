@@ -1,2 +1,2 @@
-dataset_variant: raw
+dataset_variant: rus
 n_estimators: 100
