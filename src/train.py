@@ -11,7 +11,7 @@ from sklearn.metrics import recall_score, precision_score, f1_score
 
 from dagshub import dagshub_logger
 
-mlflow.set_tracking_uri("https://dagshub.com/eryk.lewinson/mario_vs_wario_v2.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/eryk.lewinson/credit_card_fraud_imb_classification.mlflow")
 os.environ['MLFLOW_TRACKING_USERNAME'] = USER_NAME
 os.environ['MLFLOW_TRACKING_PASSWORD'] = PASSWORD
 
@@ -47,7 +47,7 @@ if __name__ == "__main__":
         # fit-predict
         model = RandomForestClassifier(random_state=42,
                                        n_estimators=N_ESTIMATORS)
-        model.fit(X_train, y_train)
+        model.fit(X_train, y_train.values.ravel())
         y_pred = model.predict(X_test)
         
         # calculate the scores
