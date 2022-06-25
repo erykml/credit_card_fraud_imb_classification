@@ -1,2 +1,2 @@
-dataset_variant: smote
+dataset_variant: adasyn
 n_estimators: 100
