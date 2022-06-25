@@ -1,5 +1,6 @@
 import pandas as pd 
 from config import RAW_DIR, PROCESSED_DIR
+import os
 
 from sklearn.model_selection import train_test_split 
 
@@ -22,6 +23,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
 # sanity check 
 print(y_train.value_counts(normalize=True).values)
 print(y_test.value_counts(normalize=True).values)
+
+# prepare output dir
+os.makedirs(PROCESSED_DIR, exist_ok=True)
 
 # saving data
 X_train.to_csv(f"{PROCESSED_DIR}/X_train.csv", index=None)
