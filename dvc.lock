@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python src/data_preparation.py
+    deps:
+    - path: data/raw
+      md5: f2c7448614b9ec3d9e7e25dac874171f.dir
+      size: 150828752
+      nfiles: 1
+    - path: src/config.py
+      md5: 47a81d95d92fc2a752ccc7bfc7175699
+      size: 129
+    outs:
+    - path: data/processed
+      md5: 0924010ed1a9777b1cbc8d502e3a87e1.dir
+      size: 148417072
+      nfiles: 4
