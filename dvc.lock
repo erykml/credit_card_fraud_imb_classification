@@ -19,17 +19,12 @@ stages:
     cmd: python src/data_augmentation.py
     deps:
     - path: data/processed
-      md5: 2eab631ec98240627b35b82f87fb58b3.dir
-      size: 877002293
-      nfiles: 13
+      md5: 4f4d54c9fe6ddaa93876c475107778d2.dir
+      size: 876996145
+      nfiles: 12
     - path: src/config.py
       md5: 47a81d95d92fc2a752ccc7bfc7175699
       size: 129
-    outs:
-    - path: data_validation
-      md5: 2fabd9b859c1d450bd28baa965c10bc4.dir
-      size: 2943606
-      nfiles: 4
   train_model:
     cmd: python src/train.py
     deps:

@@ -11,8 +11,6 @@ stages:
     deps:
     - data/processed
     - src/config.py
-    outs:
-    - data_validation
   train_model:
     cmd: python src/train.py
     deps:
