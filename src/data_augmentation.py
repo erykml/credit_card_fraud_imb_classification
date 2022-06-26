@@ -5,7 +5,7 @@ from config import RAW_DIR, PROCESSED_DIR, AUGMENTED_DIR
 from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN 
 from imblearn.under_sampling import RandomUnderSampler 
 
-RANDOM_STATE = 42
+RANDOM_STATE =123
 
 # define the considered augmentations
 RESAMPLE_CONFIG = [
