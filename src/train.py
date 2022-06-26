@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import mlflow
 
-from config import PROCESSED_DIR
+from config import PROCESSED_DIR, AUGMENTED_DIR
 from scrt import *
 
 from sklearn.preprocessing import RobustScaler
@@ -20,8 +20,8 @@ def get_data(name_short="raw"):
         X_train = pd.read_csv(f"{PROCESSED_DIR}/X_train.csv", index_col=None)
         y_train = pd.read_csv(f"{PROCESSED_DIR}/y_train.csv", index_col=None)
     else:
-        X_train = pd.read_csv(f"{PROCESSED_DIR}/X_train_{name_short}.csv", index_col=None)
-        y_train = pd.read_csv(f"{PROCESSED_DIR}/y_train_{name_short}.csv", index_col=None)
+        X_train = pd.read_csv(f"{AUGMENTED_DIR}/X_train_{name_short}.csv", index_col=None)
+        y_train = pd.read_csv(f"{AUGMENTED_DIR}/y_train_{name_short}.csv", index_col=None)
 
     X_test = pd.read_csv(f"{PROCESSED_DIR}/X_test.csv", index_col=None)
     y_test = pd.read_csv(f"{PROCESSED_DIR}/y_test.csv", index_col=None)

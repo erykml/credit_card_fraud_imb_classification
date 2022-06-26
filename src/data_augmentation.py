@@ -1,5 +1,6 @@
+import os 
 import pandas as pd 
-from config import RAW_DIR, PROCESSED_DIR
+from config import RAW_DIR, PROCESSED_DIR, AUGMENTED_DIR
 
 from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN 
 from imblearn.under_sampling import RandomUnderSampler 
@@ -24,6 +25,9 @@ RESAMPLE_CONFIG = [
     },
 ]
 
+# prepare output dir
+os.makedirs(AUGMENTED_DIR, exist_ok=True)
+
 # loading data
 X_train = pd.read_csv(f"{PROCESSED_DIR}/X_train.csv", index_col=None)
 y_train = pd.read_csv(f"{PROCESSED_DIR}/y_train.csv", index_col=None)
@@ -41,5 +45,5 @@ for resample_spec in RESAMPLE_CONFIG:
     print(f"Class distribution after: {y_res.value_counts(normalize=True).values}")
 
     # saving the resampled data
-    X_res.to_csv(f"{PROCESSED_DIR}/X_train_{resample_spec['name']}.csv", index=None)
-    y_res.to_csv(f"{PROCESSED_DIR}/y_train_{resample_spec['name']}.csv", index=None)
+    X_res.to_csv(f"{AUGMENTED_DIR}/X_train_{resample_spec['name']}.csv", index=None)
+    y_res.to_csv(f"{AUGMENTED_DIR}/y_train_{resample_spec['name']}.csv", index=None)
