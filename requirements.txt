@@ -9,3 +9,5 @@ pip-chill==1.0.1
 seaborn==0.11.2
 stack-data==0.3.0
 unicodedata2==14.0.0
+pandas==1.4.2
+scikit-learn==1.1.1
