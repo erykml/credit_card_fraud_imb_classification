@@ -5,12 +5,14 @@ on:
     branches: [ main ]
     paths:
       - data/processed/**
+      - data/augmented/**
       - src/data_preparation.py
       - src/data_augmentation.py
   pull_request:
     branches: [ main ]
     paths:
       - data/processed/**
+      - data/augmented/**
       - src/data_preparation.py
       - src/data_augmentation.py
 
