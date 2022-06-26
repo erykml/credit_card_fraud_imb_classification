@@ -51,7 +51,7 @@ jobs:
         dvc remote modify origin --local auth basic
         dvc remote modify origin --local user $DVC_USERNAME
         dvc remote modify origin --local password $DVC_PASSWORD
-        dvc pull -v train_model -r origin
+        dvc pull -v prepare_data augment_data -r origin
     
     - name: Remove the old validation reports
       run: |
