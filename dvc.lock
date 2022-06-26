@@ -33,10 +33,14 @@ stages:
   train_model:
     cmd: python src/train.py
     deps:
+    - path: data/augmented
+      md5: b3391d698b3979472bd42adb4cf49ccc.dir
+      size: 728579073
+      nfiles: 8
     - path: data/processed
-      md5: 4f4d54c9fe6ddaa93876c475107778d2.dir
-      size: 876996145
-      nfiles: 12
+      md5: 18c7c8e2d42e12950c2995ef0cdcde08.dir
+      size: 148423220
+      nfiles: 5
     - path: src/config.py
-      md5: 47a81d95d92fc2a752ccc7bfc7175699
-      size: 129
+      md5: 13ecb99040484d18289023b7c512df40
+      size: 162
