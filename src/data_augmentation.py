@@ -5,23 +5,25 @@ from config import RAW_DIR, PROCESSED_DIR, AUGMENTED_DIR
 from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN 
 from imblearn.under_sampling import RandomUnderSampler 
 
+RANDOM_STATE = 42
+
 # define the considered augmentations
 RESAMPLE_CONFIG = [
     {
         "name": "undersampling",
-        "sampler": RandomUnderSampler(random_state=42)
+        "sampler": RandomUnderSampler(random_state=RANDOM_STATE)
     },
     {
         "name": "oversampling",
-        "sampler": RandomOverSampler(random_state=42)
+        "sampler": RandomOverSampler(random_state=RANDOM_STATE)
     },
     {
         "name": "smote",
-        "sampler": SMOTE(random_state=42)
+        "sampler": SMOTE(random_state=RANDOM_STATE)
     },
     {
         "name": "adasyn",
-        "sampler": ADASYN(random_state=42)
+        "sampler": ADASYN(random_state=RANDOM_STATE)
     },
 ]
 
