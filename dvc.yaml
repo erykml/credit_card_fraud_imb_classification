@@ -11,6 +11,8 @@ stages:
     deps:
     - data/processed
     - src/config.py
+    outs:
+    - data/augmented
   train_model:
     cmd: python src/train.py
     deps:
