@@ -16,6 +16,3 @@ stages:
     deps:
     - data/processed
     - src/config.py
-    outs:
-    - metrics.csv
-    - params.yml

@@ -29,16 +29,9 @@ stages:
     cmd: python src/train.py
     deps:
     - path: data/processed
-      md5: fa2ff687454d9bd44cea2d19c5521854.dir
-      size: 739806856
+      md5: 4f4d54c9fe6ddaa93876c475107778d2.dir
+      size: 876996145
       nfiles: 12
     - path: src/config.py
       md5: 47a81d95d92fc2a752ccc7bfc7175699
       size: 129
-    outs:
-    - path: metrics.csv
-      md5: 176df9ab7fc42ece6fb62ec886164e9b
-      size: 165
-    - path: params.yml
-      md5: 870e32ba47b08e9f4e352967a2df4db0
-      size: 39
