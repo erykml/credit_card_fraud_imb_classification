@@ -11,14 +11,10 @@ from deepchecks.tabular.suites import full_suite
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 # get the names of the resampled datasets
-os.chdir("data/processed")
-data_files = glob.glob("*.csv")
+data_files = glob.glob("data/processed/*.csv")
 
-resampled_names = [file_name.replace("X_train_", "").replace(".csv", "") for file_name in data_files if "X_train_" in file_name]
+resampled_names = [file_name.replace("data/processed/", "").replace("X_train_", "").replace(".csv", "") for file_name in data_files if "X_train_" in file_name]
 resampled_names = [name for name in resampled_names if len(name) > 0]
-
-# back to root
-os.chdir("../..")
 
 # loading the original data
 X_train = pd.read_csv(f"{PROCESSED_DIR}/X_train.csv", index_col=None)
