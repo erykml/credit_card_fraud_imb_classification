@@ -30,8 +30,8 @@ for resampled_data in resampled_names:
     X_res = pd.read_csv(f"{AUGMENTED_DIR}/X_train_{resampled_data}.csv", index_col=None)
     y_res = pd.read_csv(f"{AUGMENTED_DIR}/y_train_{resampled_data}.csv", index_col=None)
 
-    print(X_res.shape)
-    print(y_res.shape)
+    print(f"X: {X_res.shape}")
+    print(f"y: {y_res.shape}")
 
     # creating a deepchecks dataset from the resampled data
     ds_train_res = Dataset(X_res, label=y_res, cat_features=[])
