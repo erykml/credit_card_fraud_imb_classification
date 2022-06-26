@@ -25,8 +25,13 @@ ds_train = Dataset(X_train, label=y_train, cat_features=[])
 
 for resampled_data in resampled_names:
 
+    print(f"Validating the {resampled_data} dataset ----")
+
     X_res = pd.read_csv(f"{AUGMENTED_DIR}/X_train_{resampled_data}.csv", index_col=None)
     y_res = pd.read_csv(f"{AUGMENTED_DIR}/y_train_{resampled_data}.csv", index_col=None)
+
+    print(X_res.size)
+    print(y_res.size)
 
     # creating a deepchecks dataset from the resampled data
     ds_train_res = Dataset(X_res, label=y_res, cat_features=[])
