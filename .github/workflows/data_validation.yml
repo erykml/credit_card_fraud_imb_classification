@@ -48,7 +48,6 @@ jobs:
     
     - name: Get data
       run: |
-        dvc remote add origin https://dagshub.com/eryk.lewinson/credit_card_fraud_imb_classification.dvc
         dvc remote modify origin --local auth basic
         dvc remote modify origin --local user $DVC_USERNAME
         dvc remote modify origin --local password $DVC_PASSWORD
