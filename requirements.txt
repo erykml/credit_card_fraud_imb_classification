@@ -1,0 +1,11 @@
+backports.functools-lru-cache==1.6.4
+dagshub==0.1.8
+deepchecks==0.8.0
+dvc==2.11.0
+imbalanced-learn==0.9.1
+mlflow==1.26.1
+munkres==1.1.4
+pip-chill==1.0.1
+seaborn==0.11.2
+stack-data==0.3.0
+unicodedata2==14.0.0
