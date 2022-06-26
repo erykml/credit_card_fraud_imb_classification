@@ -9,6 +9,8 @@ We use the following resampling approaches:
 * SMOTE
 * ADASYN
 
+Additionally, we use `deepchecks` to investigate how the resampling impacts the distribution of the features in the training data.
+
 For more voice-over, please refer to the following [article]().
 
 **References**
