@@ -8,6 +8,7 @@ on:
       - data/augmented/**
       - src/data_preparation.py
       - src/data_augmentation.py
+      - dvc.lock
   pull_request:
     branches: [ main ]
     paths:
@@ -15,6 +16,7 @@ on:
       - data/augmented/**
       - src/data_preparation.py
       - src/data_augmentation.py
+      - dvc.lock
 
 permissions: write-all
 
