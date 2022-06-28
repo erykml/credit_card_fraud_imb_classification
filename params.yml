@@ -1,2 +1,2 @@
-dataset_variant: oversampling
+dataset_variant: smote
 n_estimators: 100
