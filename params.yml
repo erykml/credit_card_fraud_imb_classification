@@ -1,2 +1,2 @@
-dataset_variant: undersampling
+dataset_variant: oversampling
 n_estimators: 100
