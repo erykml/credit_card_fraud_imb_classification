@@ -12,34 +12,34 @@ stages:
       size: 162
     outs:
     - path: data/processed
-      md5: 4f91a1adb00b641eb6276d351076b80a.dir
-      size: 148417072
+      md5: 9a20d5d016a1678a4d34920aa327835b.dir
+      size: 152505303
       nfiles: 4
   augment_data:
     cmd: python src/data_augmentation.py
     deps:
     - path: data/processed
-      md5: 4f91a1adb00b641eb6276d351076b80a.dir
-      size: 148417072
+      md5: 9a20d5d016a1678a4d34920aa327835b.dir
+      size: 152505303
       nfiles: 4
     - path: src/config.py
       md5: 13ecb99040484d18289023b7c512df40
       size: 162
     outs:
     - path: data/augmented
-      md5: 2d184bf83a9a9869c6a7a330d5745e32.dir
-      size: 728376030
+      md5: ec9ccf3b0890a8c30482cdc64955441c.dir
+      size: 743103134
       nfiles: 8
   train_model:
     cmd: python src/train.py
     deps:
     - path: data/augmented
-      md5: 2d184bf83a9a9869c6a7a330d5745e32.dir
-      size: 728376030
+      md5: ec9ccf3b0890a8c30482cdc64955441c.dir
+      size: 743103134
       nfiles: 8
     - path: data/processed
-      md5: 4f91a1adb00b641eb6276d351076b80a.dir
-      size: 148417072
+      md5: 9a20d5d016a1678a4d34920aa327835b.dir
+      size: 152505303
       nfiles: 4
     - path: src/config.py
       md5: 13ecb99040484d18289023b7c512df40
