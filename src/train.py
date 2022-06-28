@@ -5,7 +5,6 @@ import mlflow
 from config import PROCESSED_DIR, AUGMENTED_DIR
 from scrt import *
 
-from sklearn.preprocessing import RobustScaler
 from sklearn.ensemble import RandomForestClassifier 
 from sklearn.metrics import recall_score, precision_score, f1_score
 
@@ -38,11 +37,6 @@ if __name__ == "__main__":
     with mlflow.start_run():
         # get data
         X_train, X_test, y_train, y_test = get_data(DATASET_NAME)
-        
-        # scale the amount feature
-        robust_scaler = RobustScaler()
-        X_train[["Amount"]] = robust_scaler.fit_transform(X_train[["Amount"]])
-        X_test[["Amount"]] = robust_scaler.transform(X_test[["Amount"]])
         
         # fit-predict
         model = RandomForestClassifier(random_state=42,
