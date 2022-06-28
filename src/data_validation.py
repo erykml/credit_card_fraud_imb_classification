@@ -30,6 +30,7 @@ for resampled_data in resampled_names:
     X_res = pd.read_csv(f"{AUGMENTED_DIR}/X_train_{resampled_data}.csv", index_col=None)
     y_res = pd.read_csv(f"{AUGMENTED_DIR}/y_train_{resampled_data}.csv", index_col=None)
 
+    print("Shapes ----")
     print(f"X: {X_res.shape}")
     print(f"y: {y_res.shape}")
 
