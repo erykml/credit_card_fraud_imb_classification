@@ -27,7 +27,7 @@ RESAMPLE_CONFIG = [
     },
 ]
 
-# prepare output dir
+# prepare output directory
 os.makedirs(AUGMENTED_DIR, exist_ok=True)
 
 # loading data
