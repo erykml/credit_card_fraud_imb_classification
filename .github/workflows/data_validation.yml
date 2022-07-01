@@ -61,7 +61,10 @@ jobs:
         mkdir data_validation
         
     - name: Validate data with deepchecks
-      run: python src/data_validation.py
+      run: |
+        python src/data_preparation.py
+        python src/data_augmentation.py
+        python src/data_validation.py
     
     - name: Commit the validation report file
       uses: stefanzweifel/git-auto-commit-action@v4
