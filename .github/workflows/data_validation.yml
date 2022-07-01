@@ -4,6 +4,7 @@ on:
   push:
     branches: [ gh-actions ]
     paths:
+      - *requirements.txt
       - .github/workflows/*
       - data/processed/**
       - data/augmented/**
