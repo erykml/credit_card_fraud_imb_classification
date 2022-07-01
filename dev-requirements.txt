@@ -1,4 +1,5 @@
 deepchecks==0.8.0
+imbalanced-learn==0.9.1
 pandas
 dvc==2.11.0
 pandas==1.4.2
