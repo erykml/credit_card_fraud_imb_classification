@@ -2,19 +2,16 @@ name: Data validation with deepchecks
 
 on:
   push:
-    branches: [ gh-actions ]
+    branches: [ main ]
     paths:
-      - dev-requirements.txt
-      - .github/workflows/*
       - data/processed/**
       - data/augmented/**
       - src/data_preparation.py
       - src/data_augmentation.py
       - dvc.lock
   pull_request:
-    branches: [ gh-actions ]
+    branches: [ main ]
     paths:
-      - .github/workflows/*
       - data/processed/**
       - data/augmented/**
       - src/data_preparation.py
